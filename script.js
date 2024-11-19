@@ -1,5 +1,5 @@
 const video = document.getElementById("video");
-
+const {ListarPastas} = require('./users')
 Promise.all([
   faceapi.nets.ssdMobilenetv1.loadFromUri("/models"),
   faceapi.nets.faceRecognitionNet.loadFromUri("/models"),
@@ -20,10 +20,11 @@ function startWebcam() {
     });
 }
 
+
 function getLabeledFaceDescriptions() {
-  const labels = ["diogo", "messi", "jose_carlos_silva"];
+
   return Promise.all(
-    labels.map(async (label) => {
+    ListarPastas.map(async (label) => {
       const descriptions = [];
       for (let i = 1; i <= 2; i++) {
         const img = await faceapi.fetchImage(`./labels/${label}/${i}.png`);
