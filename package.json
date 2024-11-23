@@ -1,0 +1,15 @@
+{
+  "name": "face_recogniton_js",
+  "version": "1.0.0",
+  "description": "Criação de novos usuários com \r ~~~\r node createUsers.js ./labels nomedousuario\r ~~~\r sem espaços e sem letras maiusculas",
+  "main": "createUsers.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
